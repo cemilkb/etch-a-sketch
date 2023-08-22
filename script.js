@@ -7,6 +7,7 @@ let colorChoice = document.getElementById("color")
 let colorButton = document.getElementById("colorBtn")
 let rainbowButton = document.getElementById("rainbowBtn")
 let eraseButton = document.getElementById("eraseBtn")
+let clearButton = document.getElementById("clearBtn")
 let bgColor = colorChoice.value
 let rgbColor 
 
@@ -80,6 +81,13 @@ function erase(){
     bgColor= "white"
 }
 
+function clear(){
+   let column = document.querySelectorAll(".column")
+   column.forEach((element)=>{
+    element.style.backgroundColor = "white"
+   }) 
+}
+
 // For Beginning
 
 pixelTable()
@@ -96,6 +104,8 @@ rainbowButton.addEventListener("click", () => {
 })
 
 eraseButton.addEventListener("click", erase)
+
+clearButton.addEventListener("click", clear)
 
 
 
