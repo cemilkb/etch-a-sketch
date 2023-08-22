@@ -1,14 +1,19 @@
+// Geting Elements
+
 let ekle = document.querySelector(".sketch")
-let pixel = document.getElementById("pixel")
-let pixelX = document.getElementById("pixelX")
+let pixelValue = document.getElementById("pixel")
+let pixelSpan = document.getElementById("pixelX")
+let colorChoice = document.getElementById("color")
+let colorButton = document.getElementById("colorBtn")
+let bgColor = colorChoice.value
 
 // Functions
 
-function pixelTable(){
+function pixelTable() {
     let isOkay = false
-    
+
     ekle.innerHTML = ""
-    pixelX.textContent = `${pixel.value}x${pixel.value}`
+    pixelSpan.textContent = `${pixel.value}x${pixel.value}`
 
     for (let i = 1; i <= pixel.value; i++) {
 
@@ -24,12 +29,12 @@ function pixelTable(){
 
             div2.addEventListener("mousedown", () => {
                 isOkay = true
-                div2.style.backgroundColor = "red"
+                div2.style.backgroundColor = bgColor
             })
 
             div2.addEventListener("mousemove", () => {
                 if (isOkay) {
-                    div2.style.backgroundColor = "red"
+                    div2.style.backgroundColor = bgColor
                 }
             })
 
@@ -44,12 +49,23 @@ function pixelTable(){
     }
 }
 
+function colorChange() {
+    bgColor = colorChoice.value
+
+    colorChoice.addEventListener("change", () => {
+        bgColor = colorChoice.value
+    })
+}
+
 // For Beginning
 
 pixelTable()
 
 // Eent Listener
-pixel.addEventListener("change", pixelTable)
+
+pixelValue.addEventListener("change", pixelTable)
+
+colorButton.addEventListener("click", colorChange)
 
 
 
