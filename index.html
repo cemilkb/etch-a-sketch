@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etch a Sketch</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/7a3f520e9b.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <header>
+        <h1>Etch-a-Sketch</h1>
+        <h1>- - - - - - </h1>
+        <h1>For draw just click or click and hold</h1>
+    </header>
+
+    <main>
+
+        <div class="options">
+            <button style="background-color: #12355B; color:#5FAD56 ;">Color </button>
+            <button style="background-color: #D3D4D9; "><span style="color: red;">R</span><span style="color: orange;">a</span><span
+                    style="color: yellow;">i</span><span style="color: green;">n</span><span
+                    style="color: rgb(0, 132, 255);">b</span><span style="color: rgb(0, 0, 255);">o</span><span style="color: rgb(255, 0, 255);">w</span>
+                </button>
+            <button style="color: #D3D4D9 ; background-color: #F05D5E;">Erase</button>
+        </div>
+
+        <div class="sketch">
+
+        </div>
+
+        <div class="colorPixel">
+            <fieldset style="padding: 0px; display: flex; border: none;">
+                <legend style="color: white;">Color pick:</legend>
+            <input type="color" id="color" style="width: 80px; height: 80px;">
+            </fieldset>
+            <input type="range" min="1" max="100">
+        </div>
+
+    </main>
+
+    <footer>
+        <p><i class="fa-brands fa-github"></i> cemilkb</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
