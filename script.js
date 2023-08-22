@@ -8,8 +8,10 @@ let colorButton = document.getElementById("colorBtn")
 let rainbowButton = document.getElementById("rainbowBtn")
 let eraseButton = document.getElementById("eraseBtn")
 let clearButton = document.getElementById("clearBtn")
+let gridButton = document.getElementById("gridBtn")
 let bgColor = colorChoice.value
 let rgbColor 
+let isGridOn = 1
 
 // Functions
 
@@ -88,6 +90,27 @@ function clear(){
    }) 
 }
 
+function grid(){
+  if(isGridOn === 1){
+    let column = document.querySelectorAll(".column")
+    column.forEach((element)=>{
+     element.style.border = "none"
+    }) 
+    gridButton.textContent="Grid: Off"
+    gridButton.setAttribute("class", "off")
+    isGridOn = 0
+  }
+  else if(isGridOn === 0){
+    let column = document.querySelectorAll(".column")
+    column.forEach((element)=>{
+     element.style.border = "1px solid black"
+    }) 
+    gridButton.textContent="Grid: On"
+    gridButton.setAttribute("class", "on")
+    isGridOn = 1
+  }
+}
+
 // For Beginning
 
 pixelTable()
@@ -106,6 +129,8 @@ rainbowButton.addEventListener("click", () => {
 eraseButton.addEventListener("click", erase)
 
 clearButton.addEventListener("click", clear)
+
+gridButton.addEventListener("click", grid)
 
 
 

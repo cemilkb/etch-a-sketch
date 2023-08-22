@@ -106,22 +106,62 @@ main {
 }
 
 .clearMode {
-    background-color: white;
-    color: red;
+    background-color: rgb(153, 36, 36);
+    color: white;
     transition: all 0.2s;
 }
 
 .clearMode:hover {
-    box-shadow: 0px 0px 10px 5px #12355B;
-    text-shadow: 0px 0px 50px red;
+    box-shadow: 0px 0px 10px 5px rgb(153, 36, 36);
+    text-shadow: 0px 0px 50px white;
     scale: 1.1;
 }
 
 .clearMode:active {
+    box-shadow: 0px 0px 10px 5px rgb(153, 36, 36);
+    text-shadow: 0px 0px 10px rgb(153, 36, 36);
+    color: rgb(153, 36, 36);
+    background-color: white;
+    scale: 1;
+}
+
+.on {
+    background-color: rgb(236, 236, 236);
+    color: black;
+    transition: all 0.2s;
+}
+
+.on:hover {
+    box-shadow: 0px 0px 10px 5px #12355B;
+    text-shadow: 0px 0px 50px rgb(153, 36, 36);
+    scale: 1.1;
+}
+
+.on:active {
     box-shadow: 0px 0px 10px 5px white;
     text-shadow: 0px 0px 10px white;
     color: white;
-    background-color: red;
+    background-color: black;
+    scale: 1;
+}
+
+.off {
+    background-color: black;
+    color: white;
+    transition: all 0.2s;
+}
+
+.off:hover {
+    box-shadow: 0px 0px 10px 5px #12355B;
+    text-shadow: 0px 0px 50px rgb(153, 36, 36);
+    scale: 1.1;
+}
+
+.off:active {
+    box-shadow: 0px 0px 10px 5px white;
+    text-shadow: 0px 0px 10px white;
+    color: black;
+    background-color: white;
     scale: 1;
 }
 
@@ -164,8 +204,6 @@ main {
     border: 1px solid black;
     flex: 1;
 }
-
-
 
 
 
