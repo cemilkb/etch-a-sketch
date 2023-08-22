@@ -19,7 +19,7 @@ function pixelTable(color) {
     let isOkay = false
 
     ekle.innerHTML = ""
-    pixelSpan.textContent = `${pixel.value}x${pixel.value}`
+    pixelSpan.textContent = `${pixel.value}x${pixel.value} Pixel`
 
     for (let i = 1; i <= pixel.value; i++) {
 
