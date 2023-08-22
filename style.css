@@ -10,7 +10,7 @@ body {
 header {
     display: flex;
     flex-direction: column;
-    align-items:center ;
+    align-items: center;
     margin-top: 24px;
     color: #D3D4D9;
 }
@@ -34,7 +34,7 @@ main {
     justify-content: center;
     align-items: center;
     gap: 12px;
-    
+
 }
 
 .options button {
@@ -45,13 +45,74 @@ main {
     border: none;
     border-radius: 50px;
     font-size: 22px;
+    cursor: pointer;
 }
+
+.colorMode {
+    background-color: #12355B;
+    color: #5FAD56;
+    transition: all 0.2s;
+}
+
+.colorMode:hover {
+    box-shadow: 0px 0px 10px 5px #12355B;
+    text-shadow: 0px 0px 10px #5FAD56;
+    scale: 1.1;
+}
+
+.colorMode:active {
+    box-shadow: 0px 0px 10px 5px white;
+    text-shadow: 0px 0px 10px white;
+    color: white;
+    scale: 1;
+}
+
+.rainbowMode {
+    background-color: #D3D4D9;
+    transition: all 0.2s;
+}
+
+.rainbowMode:hover {
+    box-shadow: 0px 0px 10px plum;
+    text-shadow: 0px 0px 2px purple;
+    scale: 1.1;
+}
+
+.rainbowMode:active {
+    box-shadow: 0px 0px 10px 5px white;
+    text-shadow: 0px 0px 10px white;
+    scale: 1;
+}
+
+.eraseMode {
+    color: #D3D4D9;
+    background-color: #F05D5E;
+    transition: all 0.2s;
+}
+
+
+.eraseMode:hover {
+    box-shadow: 0px 0px 10px 5px #F05D5E;
+    text-shadow: 0px 0px 2px purple;
+    color: black;
+    scale: 1.1;
+}
+
+.eraseMode:active {
+    box-shadow: 0px 0px 10px 5px white;
+    text-shadow: 0px 0px 10px white;
+    color: white;
+    scale: 1;
+}
+
 
 .sketch {
     width: 500px;
     height: 500px;
     border: 2px solid #F05D5E;
     background-color: white;
+    display: flex;
+    flex-direction: column;
 }
 
 .colorPixel {
@@ -59,6 +120,7 @@ main {
     flex-direction: column;
     justify-content: center;
     gap: 12px;
+    
 }
 
 .colorPixel input[type="range"] {
@@ -66,9 +128,22 @@ main {
     background-color: #5FAD56;
     height: 8px;
     border-radius: 50px;
+    cursor: pointer;
 }
 
+.colorPixel input[type="color"]{
+    cursor: pointer;
+}
 
+.row {
+    display: flex;
+    flex: 1;
+}
+
+.column {
+    border: 1px solid black;
+    flex: 1;
+}
 
 
 
@@ -81,4 +156,5 @@ footer {
     left: 0px;
     right: 0px;
     text-align: center;
+    color: white;
 }
